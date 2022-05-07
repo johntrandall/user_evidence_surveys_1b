@@ -9,9 +9,9 @@
 Survey.destroy_all
 
 survey_2021 = Survey.create!(name: "2021 New Customer Satisfaction Survey")
-Survey.create!(name: "2022 New Customer Satisfaction Survey")
-Survey.create!(name: "2010 Mid Year Customer Survey")
-Survey.create!(name: "2011 Mid Year Customer Survey")
+Survey.create!(name: "2022 New Customer Survey")
+Survey.create!(name: "2010 Mid Year Survey")
+Survey.create!(name: "2011 Mid Year Survey")
 
 survey_2021.questions.create!(text: "Should UserEvidence hire John?")
 survey_2021.questions.create!(text: "Who shot first, Han or Greedo?")
