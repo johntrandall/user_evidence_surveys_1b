@@ -1,0 +1,11 @@
+<h1>Surveys</h1>
+<ul>
+<% @surveys.each do |survey| %>
+  <li>
+    <h2><%= survey.name %></h2>
+    <hr>
+    <%= survey.questions.size %> Questions
+    <%= survey.questions.map{|q|q.answers.size}.max || 0 %> Responses
+  </li>
+<% end %>
+</ul>
