@@ -10,7 +10,6 @@
     </thead>
 
     <% @questions.each do |question| %>
-
       <tr class="bg-light border-0">
         <td>
           <%= question.text %>
@@ -20,12 +19,14 @@
         </td>
         <td>
           <% if question.answers.present? %>
-            Show Responses #TODO - toggle
+            <a class="show-hide collapsed" data-bs-toggle="collapse" href="#collapse<%= question.id %>">
+              Show Responses #TODO
+            </a>
           <% end %>
         </td>
       </tr>
 
-      <tr class="">
+      <tr class="collapse" id="collapse<%= question.id %>">
         <td colspan=3>
           <div class="ms-5">
 
