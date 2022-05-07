@@ -23,3 +23,9 @@ com/file/dWHgGLiC2tXuuWVkIGmtSd/UserEvidence-Takehome-Wireframes?node-id=0%3A1
 [ ] This should take less than 2 hours of your time, please do not spend any more than that.
 
 [ ] Deliver the project in a github repo.
+
+
+
+
+## Domain quesitons:
+* Should Question exist independently of Survey? For now, each question belongs to a single survey
