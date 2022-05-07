@@ -66,3 +66,4 @@ end
 
 gem "rspec-rails", group: [:development, :test]
 gem "annotate", group: [:development]
+gem "factory_bot_rails", group: [:development, :test]
