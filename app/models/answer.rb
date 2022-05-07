@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: responses
+# Table name: answers
 #
 #  id          :bigint           not null, primary key
 #  text        :string
@@ -10,14 +10,12 @@
 #
 # Indexes
 #
-#  index_responses_on_question_id  (question_id)
+#  index_answers_on_question_id  (question_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (question_id => questions.id)
 #
-FactoryBot.define do
-  factory :response do
-    question { create(:question) }
-  end
+class Answer < ApplicationRecord
+  belongs_to :question
 end

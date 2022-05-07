@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: responses
+# Table name: answers
 #
 #  id          :bigint           not null, primary key
 #  text        :string
@@ -10,12 +10,16 @@
 #
 # Indexes
 #
-#  index_responses_on_question_id  (question_id)
+#  index_answers_on_question_id  (question_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (question_id => questions.id)
 #
-class Response < ApplicationRecord
-  belongs_to :question
+require 'rails_helper'
+
+RSpec.describe Answer, type: :model do
+  it 'has a factory' do
+    expect{FactoryBot.create(:answer)}.not_to raise_error
+  end
 end

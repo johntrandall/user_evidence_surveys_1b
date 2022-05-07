@@ -16,10 +16,8 @@
 #
 #  fk_rails_...  (question_id => questions.id)
 #
-require 'rails_helper'
-
-RSpec.describe Response, type: :model do
-  it 'has a factory' do
-    expect{FactoryBot.create(:response)}.not_to raise_error
+FactoryBot.define do
+  factory :answer do
+    question { create(:question) }
   end
 end
