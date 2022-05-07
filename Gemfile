@@ -43,7 +43,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+# enabled to turn on bootstrap, see https://dev.to/coorasse/rails-7-bootstrap-5-and-importmaps-without-nodejs-4g8
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -69,3 +70,4 @@ gem "annotate", group: [:development]
 gem "factory_bot_rails", group: [:development, :test]
 gem "cicero", group: [:development]
 gem "rails-controller-testing", group: [:test]
+gem "bootstrap"

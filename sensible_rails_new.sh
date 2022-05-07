@@ -26,7 +26,7 @@ brew upgrade git
 
 echo "\n\n\n\n*********************************"
 echo "Creating new Rails Project"
-rails new $project_name --database=postgresql --v='6' --skip-test
+rails new $project_name --database=postgresql --v='6' --css=bootstrap --skip-test
 cd $project_name
 git add .
 git commit -m "Rails New"
