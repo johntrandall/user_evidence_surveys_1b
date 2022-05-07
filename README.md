@@ -1,24 +1,25 @@
-# README
+# User Evidence Full Stack Engineer Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## John Randall
+* http://linkedin.com/in/johnrandall
+* john@johnrandall.com
 
-Things you may want to cover:
 
-* Ruby version
+## Billy's Challenge:
 
-* System dependencies
+[ ] Create a survey that has many questions, each question can have many responses.
 
-* Configuration
+[ ] Seed the database with some surveys, questions and responses.
 
-* Database creation
+[ ] Create the following ‘admin’ pages, following the layout as closely as possible: https://www.figma.
+com/file/dWHgGLiC2tXuuWVkIGmtSd/UserEvidence-Takehome-Wireframes?node-id=0%3A1
 
-* Database initialization
+[ ] Create the backend using Ruby on Rails and any gems of your choosing.
 
-* How to run the test suite
+[ ] Create the frontend using Vue, React or Angular. CSS should be coded by hand.
 
-* Services (job queues, cache servers, search engines, etc.)
+[ ] Database queries should be as performant as possible.
 
-* Deployment instructions
+[ ] This should take less than 2 hours of your time, please do not spend any more than that.
 
-* ...
+[ ] Deliver the project in a github repo.
