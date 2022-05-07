@@ -1,11 +1,13 @@
 <h1>Surveys</h1>
 <ul>
-<% @surveys.each do |survey| %>
-  <li>
-    <h2><%= survey.name %></h2>
-    <hr>
-    <%= survey.questions.size %> Questions
-    <%= survey.questions.map{|q|q.answers.size}.max || 0 %> Responses
-  </li>
-<% end %>
+  <% @surveys.each do |survey| %>
+    <li>
+      <%= link_to survey_path(survey) do %>
+        <h2><%= survey.name %></h2>
+        <hr>
+        <%= survey.questions.size %> Questions
+        <%= survey.questions.map { |q| q.answers.size }.max || 0 %> Responses
+      <% end %>
+    </li>
+  <% end %>
 </ul>

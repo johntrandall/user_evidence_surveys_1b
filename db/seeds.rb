@@ -14,6 +14,7 @@ Survey.create!(name: "2010 Mid Year Customer Survey")
 Survey.create!(name: "2011 Mid Year Customer Survey")
 
 survey_2021.questions.create!(text: "Should UserEvidence hire John?")
+survey_2021.questions.create!(text: "Who shot first, Han or Greedo?")
 question_2021 = survey_2021.questions.create!(text: "What other products did you  before choosing UserEvidence?")
 
 3.times do
