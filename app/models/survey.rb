@@ -8,4 +8,5 @@
 #  updated_at :datetime         not null
 #
 class Survey < ApplicationRecord
+  has_many :questions, dependent: :destroy
 end
