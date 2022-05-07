@@ -1,28 +1,68 @@
-<h1><%= @survey.name %></h1>
-<ul>
-  <% @questions.each do |question| %>
-    <li>
-      <h2><%= question.text %></h2>
-      <table>
-        <thead>
-        <td>Respondent Name</td>
-        <td>Email</td>
-        <td>Response</td>
-        </thead>
-        <% question.answers.each do |answer| %>
-          <tr>
-            <td>
-              <%= answer.name %>
-            </td>
-            <td>
-              <%= answer.email %>
-            </td>
-            <td>
-              <%= answer.text %>
-            </td>
-          </tr>
-        <% end %>
-      </table>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1><%= @survey.name %></h1>
+
+
+  <table class="table mt-5">
+    <thead class="">
+    <th>Question</th>
+    <th>Response Count</th>
+    <th>Controls</th>
+    </thead>
+
+    <% @questions.each do |question| %>
+
+      <tr class="bg-light border-0">
+        <td>
+          <%= question.text %>
+        </td>
+        <td>
+          <%= question.answers.size %>
+        </td>
+        <td>
+          <% if question.answers.present? %>
+            Show Responses #TODO - toggle
+          <% end %>
+        </td>
+      </tr>
+
+      <tr class="">
+        <td colspan=3>
+          <div class="ms-5">
+
+
+            <table class="table table-striped answers">
+              <thead class="fs-5">
+              <th class="p-4 pb-0 fw-light">
+                <nobr>Respondent Name</nobr>
+              </th>
+              <th class="p-4 pb-0 fw-light">
+                Email
+              </th>
+              <th class="p-4 pb-0 fw-light">
+                Response
+              </th>
+              </thead>
+              <% question.answers.each do |answer| %>
+                <tr>
+                  <td class="p-4 pb-4">
+                    <%= answer.name %>
+                  </td>
+                  <td class="p-4 pb-4">
+                    <%= answer.email %>
+                  </td>
+                  <td class="p-4 pb-4">
+                    <%= answer.text %>
+                  </td>
+                </tr>
+              <% end %>
+            </table>
+
+
+          </div>
+        </td>
+      </tr>
+
+    <% end %>
+
+  </table>
+</div>
