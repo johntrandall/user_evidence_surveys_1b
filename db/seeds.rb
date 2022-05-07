@@ -17,9 +17,9 @@ survey_2021.questions.create!(text: "Should UserEvidence hire John?")
 survey_2021.questions.create!(text: "Who shot first, Han or Greedo?")
 question_2021 = survey_2021.questions.create!(text: "What other products did you  before choosing UserEvidence?")
 
-3.times do
+7.times do
   question_2021.answers.create!(
-    text: Cicero.paragraphs([1, 2, 3].sample),
+    text: [Cicero.paragraphs([1, 2, 3].sample), Cicero.words([1, 3, 3].sample)].sample,
     email: "#{Cicero.word}@#{["gmail.com", "hotmail.com", "yahoo.com"].sample}",
     name: "#{Cicero.word} #{Cicero.word}"
   )
