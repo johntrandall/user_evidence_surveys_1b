@@ -1,12 +1,11 @@
 class SurveysController < ApplicationController
   def index
     @surveys = Survey.all
-                     .includes(questions: :answers)
+                     .eager_load(questions: :answers)
   end
 
   def show
-    @survey = Survey.find(params[:id])
+    @survey = Survey.eager_load(questions: :answers).find(params[:id])
     @questions = @survey.questions
-    #.(questions: :answers)
   end
 end
