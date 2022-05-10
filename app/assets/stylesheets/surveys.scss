@@ -1,0 +1,22 @@
+body.surveys.show {
+
+  table {
+    &.questions tbody {
+      > tr > td {
+        border: {
+          color: black;
+          bottom-width: 0px;
+          left-width: 0px;
+          right-width: 0px;
+        }
+      }
+
+      > tr.question.open > td { border-top-width: 1px;}
+      > tr.open > td:first-child {border-left-width: 1px;}
+      > tr.open > td:last-child {border-right-width: 1px;}
+      > tr.answer.open > td {border-bottom-width: 1px;}
+    }
+    &.answers tr:nth-child(2) {background: white;}
+  }
+
+}

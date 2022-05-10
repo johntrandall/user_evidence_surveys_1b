@@ -71,3 +71,7 @@ gem "factory_bot_rails", group: [:development, :test]
 gem "cicero", group: [:development]
 gem "rails-controller-testing", group: [:test]
 gem "bootstrap"
+
+gem "capybara", group: [:test]
+gem "selenium-webdriver", group: [:test]
+
