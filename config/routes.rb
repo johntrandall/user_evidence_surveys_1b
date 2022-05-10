@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root "surveys#index"
 
   resources :surveys, only: [:index, :show]
+  resources :answers, only: [:index]
 
 end
